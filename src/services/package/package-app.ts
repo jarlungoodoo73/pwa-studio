@@ -216,7 +216,7 @@ export async function packageApp(): Promise<void> {
               progress.report({ message: "Converting to zip..." });
               await convertPackageToZip(responseData, options.packageId);
 
-              // open android docs
+              // open meta docs
               await vscode.env.openExternal(vscode.Uri.parse(META_DOCS_URL));
             } else {
               // validation errors
