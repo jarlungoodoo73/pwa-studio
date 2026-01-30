@@ -8,8 +8,8 @@ import {
   buildMetaOptions,
   getPublisherMsixFromArray,
   getSimpleMsixFromArray,
-  iosDocsURL,
-  metaDocsURL,
+  IOS_DOCS_URL,
+  META_DOCS_URL,
   packageForIOS,
   packageForMeta,
   packageForWindows,
@@ -140,7 +140,7 @@ export async function packageApp(): Promise<void> {
               await convertPackageToZip(responseData, options.bundleId);
 
               // open iOS docs
-              await vscode.env.openExternal(vscode.Uri.parse(iosDocsURL));
+              await vscode.env.openExternal(vscode.Uri.parse(IOS_DOCS_URL));
             } else {
               // validation errors
               await vscode.window.showErrorMessage(
@@ -217,7 +217,7 @@ export async function packageApp(): Promise<void> {
               await convertPackageToZip(responseData, options.packageId);
 
               // open android docs
-              await vscode.env.openExternal(vscode.Uri.parse(metaDocsURL));
+              await vscode.env.openExternal(vscode.Uri.parse(META_DOCS_URL));
             } else {
               // validation errors
               await vscode.window.showErrorMessage(
