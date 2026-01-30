@@ -23,7 +23,7 @@ export async function packageForAndroid(options: any): Promise<any> {
   }
 }
 
-export const AndroidDocsURL =
+export const ANDROID_DOCS_URL =
   "https://blog.pwabuilder.com/docs/testing-and-publishing-your-android-pwa-to-the-google-play-store";
 
 const DISALLOWED_ANDROID_PACKAGE_CHARS_REGEX = /[^a-zA-Z0-9_]/g;

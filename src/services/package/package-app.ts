@@ -8,14 +8,14 @@ import {
   buildMetaOptions,
   getPublisherMsixFromArray,
   getSimpleMsixFromArray,
-  iosDocsURL,
-  metaDocsURL,
+  IOS_DOCS_URL,
+  META_DOCS_URL,
   packageForIOS,
   packageForMeta,
   packageForWindows,
   validateIOSOptions,
   validateMetaOptions,
-  WindowsDocsURL,
+  WINDOWS_DOCS_URL,
 } from "../../library/package-utils";
 import {
   packageQuestion,
@@ -26,7 +26,7 @@ import { getManifest } from "../manifest/manifest-service";
 import { getWorker } from "../service-worker";
 import { getURL } from "../web-publish";
 import {
-  AndroidDocsURL,
+  ANDROID_DOCS_URL,
   packageForAndroid,
   validateAndroidOptions,
 } from "./package-android-app";
@@ -140,7 +140,7 @@ export async function packageApp(): Promise<void> {
               await convertPackageToZip(responseData, options.bundleId);
 
               // open iOS docs
-              await vscode.env.openExternal(vscode.Uri.parse(iosDocsURL));
+              await vscode.env.openExternal(vscode.Uri.parse(IOS_DOCS_URL));
             } else {
               // validation errors
               await vscode.window.showErrorMessage(
@@ -178,7 +178,7 @@ export async function packageApp(): Promise<void> {
               await convertPackageToZip(responseData, options.packageId);
 
               // open android docs
-              await vscode.env.openExternal(vscode.Uri.parse(AndroidDocsURL));
+              await vscode.env.openExternal(vscode.Uri.parse(ANDROID_DOCS_URL));
             } else {
               // validation errors
               await vscode.window.showErrorMessage(
@@ -216,8 +216,8 @@ export async function packageApp(): Promise<void> {
               progress.report({ message: "Converting to zip..." });
               await convertPackageToZip(responseData, options.packageId);
 
-              // open android docs
-              await vscode.env.openExternal(vscode.Uri.parse(metaDocsURL));
+              // open meta docs
+              await vscode.env.openExternal(vscode.Uri.parse(META_DOCS_URL));
             } else {
               // validation errors
               await vscode.window.showErrorMessage(
@@ -251,7 +251,7 @@ export async function packageApp(): Promise<void> {
           await convertPackageToZip(responseData);
 
           // open windows docs
-          await vscode.env.openExternal(vscode.Uri.parse(WindowsDocsURL));
+          await vscode.env.openExternal(vscode.Uri.parse(WINDOWS_DOCS_URL));
         }
       );
     }

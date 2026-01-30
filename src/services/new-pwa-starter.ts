@@ -122,7 +122,9 @@ function removeGitFolderListener(): any {
   if (vscode.workspace.workspaceFolders) {
     let i = 0;
     while (i < vscode.workspace.workspaceFolders.length) {
-      if (vscode.workspace.workspaceFolders[i].name == repositoryName) break;
+      if (vscode.workspace.workspaceFolders[i].name === repositoryName) {
+        break;
+      }
       i++;
     }
     vscode.workspace.fs.delete(

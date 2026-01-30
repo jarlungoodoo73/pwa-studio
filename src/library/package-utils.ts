@@ -11,12 +11,12 @@ import { trackEvent } from "../services/usage-analytics";
 import { getURL } from "../services/web-publish";
 import { MetaPackageOptions } from "../services/package/meta-interfaces";
 
-export const WindowsDocsURL =
+export const WINDOWS_DOCS_URL =
   "https://blog.pwabuilder.com/docs/windows-platform/";
 
-export const iosDocsURL = "https://blog.pwabuilder.com/docs/ios-platform/";
+export const IOS_DOCS_URL = "https://blog.pwabuilder.com/docs/ios-platform/";
 
-export const metaDocsURL = "https://docs.pwabuilder.com/#/builder/meta";
+export const META_DOCS_URL = "https://docs.pwabuilder.com/#/builder/meta";
 
 /*
  * To-Do: More code re-use
