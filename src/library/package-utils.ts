@@ -11,7 +11,7 @@ import { trackEvent } from "../services/usage-analytics";
 import { getURL } from "../services/web-publish";
 import { MetaPackageOptions } from "../services/package/meta-interfaces";
 
-export const WindowsDocsURL =
+export const WINDOWS_DOCS_URL =
   "https://blog.pwabuilder.com/docs/windows-platform/";
 
 export const iosDocsURL = "https://blog.pwabuilder.com/docs/ios-platform/";
